@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Microsoft.Win32;
 
 namespace DisableUAC
 {
@@ -26,6 +27,11 @@ namespace DisableUAC
             {
                 //bad
             }
+        }
+
+        public static void WriteUACRegistryValue()
+        {
+            Microsoft.Win32.Registry.SetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System","EnableLUA", 0, RegistryValueKind.DWord);
         }
     }
 }
