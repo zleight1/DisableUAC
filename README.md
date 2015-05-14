@@ -1,4 +1,4 @@
-# DisableUAC
+# Disable Windows User Account Control
 Windows Service in C# written to disable UAC in the registry on a timer.
 
 Because sometimes Group Policy can get in the way..
@@ -22,3 +22,10 @@ Because sometimes Group Policy can get in the way..
 8. Enjoy all your new found free time not spent typing in your credentials every 2 minutes!
 
 ##Notes
+
+	- The solution is VS2013 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
+	- I have only tested this in Windows 7 x64
+
+##Thanks
+
+Thanks to @SharpProgrammer for his help with this.
