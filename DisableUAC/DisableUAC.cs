@@ -38,6 +38,7 @@ namespace DisableUAC
 
         protected override void OnStop()
         {
+            regTimer.Stop();
             Library.WriteErrorLog("Disable UAC Service has stopped.");
         }
     }
