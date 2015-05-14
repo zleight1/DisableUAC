@@ -24,7 +24,8 @@ namespace DisableUAC
         protected override void OnStart(string[] args)
         {
             regTimer = new Timer();
-            this.regTimer.Interval = 300000; //every 5 minutes
+
+            this.regTimer.Interval = 60000; //every 60 seconds
             this.regTimer.Elapsed += new System.Timers.ElapsedEventHandler(this.regTimer_Tick);
             this.regTimer.Enabled = true;
             Library.WriteErrorLog("Disable UAC Service has started.");
