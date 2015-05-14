@@ -11,7 +11,8 @@ Because sometimes Group Policy can get in the way..
 
 3. Pull the repo `git clone https://github.com/zleight1/DisableUAC.git`
 
-4. Place the service in an accessible folder (i.e. C:\DisableUAC)
+4. Place `Disable.exe` in an accessible folder (i.e. C:\DisableUAC)
+	a. You can either build the project yourself and use the one in the bin\debug folder or use the current version in Binaries in the root directory.
 
 5. Register the service
 
