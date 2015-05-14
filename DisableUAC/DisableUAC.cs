@@ -33,11 +33,11 @@ namespace DisableUAC
 
         private void regTimer_Tick(object sender, ElapsedEventArgs e)
         {
-            Library.WriteErrorLog("Setting registry keys...");
+            //Library.WriteErrorLog("Setting registry keys...");
             try
             {
                 Library.WriteUACRegistryValue();
-                Library.WriteErrorLog("Registry keys set...");
+                //Library.WriteErrorLog("Registry keys set...");
             }
             catch (Exception ex)
             {

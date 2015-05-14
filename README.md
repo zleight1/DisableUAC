@@ -16,7 +16,7 @@ Because sometimes Group Policy can get in the way..
 
 5. Register the service
 	1. In an elevated command prompt, `cd` to the directory of the executable.
-	2. Type `InstallUtil.exe “DisableUAC.exe”` which will register the service.
+	2. Type `InstallUtil.exe “DisableUAC.exe”` and hit enter, which will register the service.
 
 6. Start the service in Control Panel\All Control Panel Items\Administrative Tools\Services
 
