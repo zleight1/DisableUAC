@@ -11,12 +11,14 @@ Because sometimes Group Policy can get in the way..
 
 3. Pull the repo `git clone https://github.com/zleight1/DisableUAC.git`
 
-4. Place `Disable.exe` in an accessible folder (i.e. C:\DisableUAC)
+4. Place `DisableUAC.exe` in an accessible folder (i.e. C:\DisableUAC)
 	a. You can either build the project yourself and use the one in the bin\debug folder or use the current version in Binaries in the root directory.
 
 5. Register the service
+	a. In an elevated command prompt, `cd` to the directory of the executable.
+	b. Type `InstallUtil.exe “DisableUAC.exe”` which will register the service.
 
-6. Start the service, and set to auto start
+6. Start the service in Control Panel\All Control Panel Items\Administrative Tools\Services
 
 7. Get coffee, preferably dark and with a lot of caffeine. *No* milk and sugar allowed.
 
