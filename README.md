@@ -17,7 +17,7 @@ Because sometimes Group Policy can get in the way..
 
 6. Start the service, and set to auto start
 
-7. Get coffee, preferably dark and with a lot of caffiene. No milk and sugar allowed.
+7. Get coffee, preferably dark and with a lot of caffeine. No milk and sugar allowed.
 
 8. Enjoy all your new found free time not spent typing in your credentials every 2 minutes!
 
