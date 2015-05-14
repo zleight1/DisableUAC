@@ -9,7 +9,7 @@ Because sometimes Group Policy can get in the way..
 
 2. Disable UAC in Control Panel\All Control Panel Items\User Accounts\Change User Account Control settings
 
-3. Pull the repo
+3. Pull the repo `git clone https://github.com/zleight1/DisableUAC.git`
 
 4. Place the service in an accessible folder (i.e. C:\DisableUAC)
 
@@ -23,8 +23,8 @@ Because sometimes Group Policy can get in the way..
 
 ##Notes
 
-	- The solution is VS2013 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
-	- I have only tested this in Windows 7 x64
+- The solution is VS2013 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
+- I have only tested this in Windows 7 x64
 
 ##Thanks
 
