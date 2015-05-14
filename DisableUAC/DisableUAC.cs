@@ -34,6 +34,18 @@ namespace DisableUAC
         private void regTimer_Tick(object sender, ElapsedEventArgs e)
         {
             Library.WriteErrorLog("Setting registry keys...");
+            try
+            {
+                Library.WriteUACRegistryValue();
+                Library.WriteErrorLog("Registry keys set...");
+            }
+            catch (Exception ex)
+            {
+                //Bad stuff?
+                Debug.Print("Exception!");
+                Library.WriteErrorLog(ex);
+            }
+
         }
 
         protected override void OnStop()
