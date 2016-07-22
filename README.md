@@ -9,16 +9,15 @@ Because sometimes Group Policy can get in the way..
 
 2. Disable UAC in Control Panel\All Control Panel Items\User Accounts\Change User Account Control settings
 
-3. Pull the repo `git clone https://github.com/zleight1/DisableUAC.git`
+3. Download the latest release, currently vMediumRoast.
 
-4. Place `DisableUAC.exe` in an accessible folder (i.e. C:\DisableUAC)
-	- You can either build the project yourself and use the one in the bin\debug folder or use the current version in Binaries in the root directory.
+4. Unzip the release to a directory such as `C:\Temp`.
 
-5. Register the service
-	1. In an elevated **visual studio command prompt** (i.e. right click and run as admin), `cd` to the directory of the executable.
-	2. Type `InstallUtil.exe “DisableUAC.exe”` and hit enter, which will register the service.
+5. Open up powershell and make sure you have adminstrative rights. You may need to run `Set-ExecutionPolicy Unrestricted`, depending on your machine's settings.
+	1. Navigate into the directory with `cd`.
 
-6. Start the service in Control Panel\All Control Panel Items\Administrative Tools\Services
+6. Run `.\InstallUAC.ps1`, and everything should run for you. 
+	1. There are 2 customizable parameters: `-ServiceName` (default: "DisableUAC") and `-InstallPath` (default: "C:\Utilities"). They should be self explantory what they do...
 
 7. Get coffee, preferably dark and with a lot of caffeine. *No* milk and sugar allowed.
 
@@ -28,7 +27,7 @@ Because sometimes Group Policy can get in the way..
 
 - The solution is VS2013 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
 - I have only tested this in Windows 7 x64
-- You need to run this as administrator, and I claim NO responsibility if you violate company policy, etc.
+- You need to run this as administrator, and I claim NO responsibility if you violate company policy, damage your computer, or if anything happens whatsoever. You claim ALL responsibility by using this.
 - The timer hits every 5 minutes so there is a window where UAC might turn on, this is all dependent on how your GP is set up.
 - You need Visual Studio of some sort to run their command prompt, see here https://msdn.microsoft.com/en-us/library/50614e95%28v=vs.110%29.aspx
 
