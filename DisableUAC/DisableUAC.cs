@@ -17,12 +17,32 @@ namespace DisableUAC
 			this.InitializeComponent();
 		}
 
+        private string GetTimerIntervalFromConfiguration()
+        {
+            var configValue = ConfigurationManager.AppSettings[@"TimerIntervalInSeconds"];
+            if (string.IsNullOrWhiteSpace(configValue))
+            {
+                Library.WriteErrorLog("Timer Interval Configuration Invalid!");
+                return null;
+            }
+            int parseValue = -1;
+            int.TryParse(configValue, out parseValue);
+            if(parseValue <= 0)
+            {
+                Library.WriteErrorLog("Timer Interval Configuration Invalid!");
+                return null;
+            }
+            parseValue *= 1000;
+
+            return parseValue.ToString();
+        }
+
 		protected override void OnStart(string[] args)
 		{
 			this.regTimer = new Timer
 								{
 									Interval =
-										Convert.ToDouble(ConfigurationManager.AppSettings[@"TimerIntervalInSeconds"] ?? DefaultTimerInterval)
+										Convert.ToDouble(this.GetTimerIntervalFromConfiguration() ?? DefaultTimerInterval)
 								};
 
 			this.regTimer.Elapsed += this.regTimer_Tick;
