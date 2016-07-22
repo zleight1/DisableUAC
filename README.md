@@ -25,10 +25,10 @@ Because sometimes Group Policy can get in the way..
 
 ##Notes
 
-- The solution is VS2013 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
+- The solution is for VS2015 Update 3 which may not be reverse compatible, also you may want to make sure this truly works on your specific configuration as there are other GP settings that could get in the way.
 - I have only tested this in Windows 7 x64
-- You need to run this as administrator, and I claim NO responsibility if you violate company policy, damage your computer, or if anything happens whatsoever. You claim ALL responsibility by using this.
-- The timer hits every 5 minutes so there is a window where UAC might turn on, this is all dependent on how your GP is set up.
+- You need to run this as administrator, and I claim NO responsibility if you violate company policy, damage your computer, or if anything happens whatsoever. *You claim ALL responsibility by using this and agree to not hold me liable in any way shape or form.*
+- The timer hits every 30 seconds by default, so there is a window where UAC might turn on, this is all dependent on how your GP is set up, this is customizable by changing the `appSetting` called `TimerIntervalInSeconds`.
 - You need Visual Studio of some sort to run their command prompt, see here https://msdn.microsoft.com/en-us/library/50614e95%28v=vs.110%29.aspx
 
 ##Thanks
